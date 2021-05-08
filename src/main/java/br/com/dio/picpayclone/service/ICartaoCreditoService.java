@@ -4,6 +4,5 @@ import br.com.dio.picpayclone.dto.CartaoCreditoDTO;
 
 public interface ICartaoCreditoService {
 
-	CartaoCreditoDTO salvar(CartaoCreditoDTO cartaoCreditoDTO);
-	
+    CartaoCreditoDTO salvar(CartaoCreditoDTO cartaoCreditoDTO);
 }

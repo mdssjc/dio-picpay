@@ -1,37 +1,35 @@
 package br.com.dio.picpayclone.dto;
 
-import javax.validation.constraints.NotBlank;
-
+import br.com.dio.picpayclone.enums.BandeiraCartao;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.sun.istack.NotNull;
-
-import br.com.dio.picpayclone.enums.BandeiraCartao;
 import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
 
 @Data
 @JsonInclude(Include.NON_NULL)
 public class CartaoCreditoDTO {
 
-	@NotBlank
-	private BandeiraCartao bandeira;
+    @NotBlank
+    private BandeiraCartao bandeira;
 
-	@NotBlank
-	private String codigoSeguranca;
+    @NotBlank
+    private String codigoSeguranca;
 
-	@NotBlank
-	private String dataExpiracao;
+    @NotBlank
+    private String dataExpiracao;
 
-	@NotBlank
-	private String nomeTitular;
-	
-	private String numero;
+    @NotBlank
+    private String nomeTitular;
 
-	private String numeroToken;
+    private String numero;
 
-	@NotNull
-	private UsuarioDTO usuario;
+    private String numeroToken;
 
-	private Boolean isSalva = false;
+    @NotNull
+    private UsuarioDTO usuario;
 
+    private Boolean isSalva = false;
 }

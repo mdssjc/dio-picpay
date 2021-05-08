@@ -8,16 +8,15 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class EntidadeBase {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	public Long getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

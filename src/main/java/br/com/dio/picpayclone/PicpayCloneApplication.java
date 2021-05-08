@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PicpayCloneApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PicpayCloneApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(PicpayCloneApplication.class, args);
+    }
 }
