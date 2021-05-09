@@ -15,7 +15,7 @@ import java.util.List;
 @Api(value = "/usuarios", description = "Operações relacionadas a Usuários")
 public interface IUsuarioResource {
 
-    @ApiOperation(value = "Consultar saldo de um usuário por login", nickname = "consultarSaldo", notes = "", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
+    @ApiOperation(value = "Consultar saldo de um usuário por login", nickname = "consultarSaldo", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
             @Authorization(value = "basicAuth")}, tags = {"usuarios"})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Saldo consultado com sucesso", response = UsuarioDTO.class, responseContainer = "object"),
@@ -23,9 +23,9 @@ public interface IUsuarioResource {
             @ApiResponse(code = 401, message = "Usuário sem permissão para acessar o recurso"),
             @ApiResponse(code = 404, message = "Usuário não encontrado")})
     @GetMapping("/{login}/saldo")
-    ResponseEntity<UsuarioDTO> consultarSaldo(@PageableDefault(page = 0, size = 20) Pageable paginacao, @PathVariable String login);
+    ResponseEntity<UsuarioDTO> consultarSaldo(@PageableDefault(size = 20) Pageable paginacao, @PathVariable String login);
 
-    @ApiOperation(value = "Consultar contatos de um usuário por login", nickname = "listarContatos", notes = "", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
+    @ApiOperation(value = "Consultar contatos de um usuário por login", nickname = "listarContatos", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
             @Authorization(value = "basicAuth")}, tags = {"usuarios",})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Contatos encontrado com sucesso", response = UsuarioDTO.class, responseContainer = "object"),
@@ -35,7 +35,7 @@ public interface IUsuarioResource {
     @GetMapping("/contatos")
     ResponseEntity<List<UsuarioDTO>> listar(@RequestParam String login);
 
-    @ApiOperation(value = "Consultar usuário por login", nickname = "consultarUsuarios", notes = "", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
+    @ApiOperation(value = "Consultar usuário por login", nickname = "consultarUsuarios", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
             @Authorization(value = "basicAuth")}, tags = {"usuarios",})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Usuário encontrado com sucesso", response = UsuarioDTO.class, responseContainer = "object"),

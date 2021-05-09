@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode
 @Entity
 @Table(name = "CARTAO_CREDITO")
 public class CartaoCredito extends EntidadeBase {

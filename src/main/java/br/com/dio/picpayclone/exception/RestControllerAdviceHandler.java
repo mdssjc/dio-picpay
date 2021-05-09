@@ -15,7 +15,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestControllerAdvice
-public class RestControllerAdviceException {
+public class RestControllerAdviceHandler {
 
     private final MessageSource messageSource;
 

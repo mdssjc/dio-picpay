@@ -3,10 +3,10 @@ package br.com.dio.picpayclone.dto;
 import br.com.dio.picpayclone.enums.BandeiraCartao;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 @JsonInclude(Include.NON_NULL)

@@ -27,7 +27,7 @@ public class TransacaoResource extends ResourceBase<TransacaoDTO> {
     }
 
     @GetMapping
-    public ResponseEntity<Page<TransacaoDTO>> listar(@PageableDefault(page = 0, size = 20) Pageable paginacao, @RequestParam String login) {
+    public ResponseEntity<Page<TransacaoDTO>> listar(@PageableDefault(size = 20) Pageable paginacao, @RequestParam String login) {
         var transacoes = transacaoService.listar(paginacao, login);
         return responderListaDeItensPaginada(transacoes);
     }

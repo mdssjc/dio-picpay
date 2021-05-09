@@ -5,6 +5,9 @@ import org.apache.logging.log4j.Logger;
 
 public class LogUtil {
 
+    private LogUtil() {
+    }
+
     private static final Logger logger = LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
 
     public static void error(String messagem) {

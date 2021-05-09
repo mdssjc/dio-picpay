@@ -19,7 +19,7 @@ public class UsuarioResource extends ResourceBase<UsuarioDTO> implements IUsuari
     private final IUsuarioService usuarioService;
 
     @GetMapping("/{login}/saldo")
-    public ResponseEntity<UsuarioDTO> consultarSaldo(@PageableDefault(page = 0, size = 20) Pageable paginacao, @PathVariable String login) {
+    public ResponseEntity<UsuarioDTO> consultarSaldo(@PageableDefault(size = 20) Pageable paginacao, @PathVariable String login) {
         var usuarioDTO = usuarioService.consultar(login);
         return responderSucessoComItem(usuarioDTO);
     }
