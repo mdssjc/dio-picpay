@@ -13,7 +13,7 @@ public class ExecucaoAssincronaConfiguracao {
 
     @Bean(name = "asyncExecutor")
     public Executor getAsyncExecutor() {
-        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        var executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(3);
         executor.setMaxPoolSize(3);
         executor.setQueueCapacity(100);

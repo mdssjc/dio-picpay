@@ -23,8 +23,7 @@ public interface IUsuarioResource {
             @ApiResponse(code = 401, message = "Usuário sem permissão para acessar o recurso"),
             @ApiResponse(code = 404, message = "Usuário não encontrado")})
     @GetMapping("/{login}/saldo")
-    public ResponseEntity<UsuarioDTO> consultarSaldo(@PageableDefault(page = 0, size = 20) Pageable paginacao,
-                                                     @PathVariable String login);
+    ResponseEntity<UsuarioDTO> consultarSaldo(@PageableDefault(page = 0, size = 20) Pageable paginacao, @PathVariable String login);
 
     @ApiOperation(value = "Consultar contatos de um usuário por login", nickname = "listarContatos", notes = "", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
             @Authorization(value = "basicAuth")}, tags = {"usuarios",})
@@ -34,7 +33,7 @@ public interface IUsuarioResource {
             @ApiResponse(code = 401, message = "Usuário sem permissão para acessar o recurso"),
             @ApiResponse(code = 404, message = "Usuário não encontrados")})
     @GetMapping("/contatos")
-    public ResponseEntity<List<UsuarioDTO>> listar(@RequestParam String login);
+    ResponseEntity<List<UsuarioDTO>> listar(@RequestParam String login);
 
     @ApiOperation(value = "Consultar usuário por login", nickname = "consultarUsuarios", notes = "", response = UsuarioDTO.class, responseContainer = "object", authorizations = {
             @Authorization(value = "basicAuth")}, tags = {"usuarios",})
@@ -44,5 +43,5 @@ public interface IUsuarioResource {
             @ApiResponse(code = 401, message = "Usuário sem permissão para acessar o recurso"),
             @ApiResponse(code = 404, message = "Usuário não encontrada")})
     @GetMapping("/{login}")
-    public ResponseEntity<UsuarioDTO> consultar(@PathVariable String login);
+    ResponseEntity<UsuarioDTO> consultar(@PathVariable String login);
 }

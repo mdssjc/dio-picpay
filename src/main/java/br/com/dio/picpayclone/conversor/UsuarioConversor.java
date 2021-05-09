@@ -9,10 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class UsuarioConversor extends ConversorBase<Usuario, UsuarioDTO> {
 
-
     @Override
     public UsuarioDTO converterEntidadeParaDto(Usuario entidade) {
-        ModelMapper modelMapper = new ModelMapper();
+        var modelMapper = new ModelMapper();
         modelMapper.addMappings(new PropertyMap<Usuario, UsuarioDTO>() {
             @Override
             protected void configure() {
@@ -23,7 +22,7 @@ public class UsuarioConversor extends ConversorBase<Usuario, UsuarioDTO> {
 
     @Override
     public Usuario converterDtoParaEntidade(UsuarioDTO dto) {
-        ModelMapper modelMapper = new ModelMapper();
+        var modelMapper = new ModelMapper();
         modelMapper.addMappings(new PropertyMap<UsuarioDTO, Usuario>() {
             @Override
             protected void configure() {
