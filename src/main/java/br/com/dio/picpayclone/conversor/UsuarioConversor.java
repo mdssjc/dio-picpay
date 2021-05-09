@@ -7,7 +7,7 @@ import org.modelmapper.PropertyMap;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UsuarioConversor extends ConversorBase<Usuario, UsuarioDTO> {
+public class UsuarioConversor implements ConversorBase<Usuario, UsuarioDTO> {
 
     @Override
     public UsuarioDTO converterEntidadeParaDto(Usuario entidade) {

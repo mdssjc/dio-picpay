@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Component
-public class TransacaoConversor extends ConversorBase<Transacao, TransacaoDTO> {
+public class TransacaoConversor implements ConversorBase<Transacao, TransacaoDTO> {
 
     private final IUsuarioService usuarioService;
 

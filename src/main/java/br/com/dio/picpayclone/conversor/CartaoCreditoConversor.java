@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Component
-public class CartaoCreditoConversor extends ConversorBase<CartaoCredito, CartaoCreditoDTO> {
+public class CartaoCreditoConversor implements ConversorBase<CartaoCredito, CartaoCreditoDTO> {
 
     private final IUsuarioService usuarioService;
 
